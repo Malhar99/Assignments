@@ -1,0 +1,49 @@
+{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header { 
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column.middle {
+  width: 100%;
+  text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.footer {
+  background-color: #f2f2f2;
+  padding-top:20px;
+}
+.container-header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
