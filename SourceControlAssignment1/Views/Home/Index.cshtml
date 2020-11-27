@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@model SourceControlAssignment1.Models.StudentModel
+<h2>Student Details</h2>
+@using (Html.BeginForm("StudentDetails", "Home", FormMethod.Post))
+{
+    <ol>
+        <li>
+            <label>Name:</label>
+            @Html.TextBoxFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+        </li>
+        <li>
+            <label>Email:</label>
+            @Html.TextBoxFor(m => m.Email)
+            @Html.ValidationMessageFor(m => m.Email)
+        </li>
+        <li>
+            <label>ConfirmEmail:</label>
+            @Html.TextBoxFor(m => m.ConfirmEmail)
+            @Html.ValidationMessageFor(m => m.ConfirmEmail)
+        </li>
+        <li>
+            <label>PhoneNumber:</label>
+            @Html.TextBoxFor(m => m.PhoneNumber)
+            @Html.ValidationMessageFor(m => m.PhoneNumber)
+        </li>
+        <li>
+            <label>Age:</label>
+            @Html.TextBoxFor(m => m.Age)
+            @Html.ValidationMessageFor(m => m.Age)
+        </li>
+    </ol>
+    <input type="submit" value="Save Student Details" />
+}
+
+<h3 style="color:green">Student Details</h3>
+<h4 style="color:green">
+    <b>
+        Name: @ViewBag.name<br />
+        Email: @ViewBag.email<br />
+        Phone Number: @ViewBag.PhoneNumber<br />
+        Age: @ViewBag.age
+    </b>
+</h4>
