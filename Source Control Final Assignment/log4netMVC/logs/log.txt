@@ -1,0 +1,10 @@
+DEBUG 2020-12-11 10:34:58,668   195ms HomeController         Index              - Debug message
+WARN  2020-12-11 10:34:58,695   222ms HomeController         Index              - Warn message
+ERROR 2020-12-11 10:34:58,696   223ms HomeController         Index              - Error message
+FATAL 2020-12-11 10:34:58,696   223ms HomeController         Index              - Fatal message
+ERROR 2020-12-11 10:35:09,723 11249ms HomeController         About              - System.DivideByZeroException: Attempted to divide by zero.
+   at log4netMVC.Controllers.HomeController.About() in F:\Gateway\log4netMVC\Controllers\HomeController.cs:line 29
+DEBUG 2020-12-11 10:37:48,240   212ms HomeController         Index              - Debug message
+WARN  2020-12-11 10:37:48,260   232ms HomeController         Index              - Warn message
+ERROR 2020-12-11 10:37:48,260   232ms HomeController         Index              - Error message
+FATAL 2020-12-11 10:37:48,261   233ms HomeController         Index              - Fatal message

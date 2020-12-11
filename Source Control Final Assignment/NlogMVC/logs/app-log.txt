@@ -1,0 +1,12 @@
+2020-12-11 10:48:56.0705|TRACE|NlogMVC.Controllers.HomeController|Sample trace message
+2020-12-11 10:48:56.1589|DEBUG|NlogMVC.Controllers.HomeController|Sample debug message
+2020-12-11 10:48:56.1692|INFO|NlogMVC.Controllers.HomeController|Sample informational message
+2020-12-11 10:48:56.1692|WARN|NlogMVC.Controllers.HomeController|Sample warning message
+2020-12-11 10:48:56.1692|ERROR|NlogMVC.Controllers.HomeController|Sample error message
+2020-12-11 10:48:56.1692|FATAL|NlogMVC.Controllers.HomeController|Sample fatal error message
+2020-12-11 10:56:13.3063|TRACE|NlogMVC.Controllers.HomeController|Sample trace message
+2020-12-11 10:56:13.4246|DEBUG|NlogMVC.Controllers.HomeController|Sample debug message
+2020-12-11 10:56:13.4335|INFO|NlogMVC.Controllers.HomeController|Sample informational message
+2020-12-11 10:56:13.4335|WARN|NlogMVC.Controllers.HomeController|Sample warning message
+2020-12-11 10:56:13.4575|ERROR|NlogMVC.Controllers.HomeController|Sample error message
+2020-12-11 10:56:13.4575|FATAL|NlogMVC.Controllers.HomeController|Sample fatal error message

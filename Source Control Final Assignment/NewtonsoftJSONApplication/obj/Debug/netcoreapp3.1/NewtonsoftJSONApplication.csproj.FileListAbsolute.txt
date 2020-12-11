@@ -1,0 +1,15 @@
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\NewtonsoftJSONApplication.exe
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.csprojAssemblyReference.cache
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.AssemblyInfoInputs.cache
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.AssemblyInfo.cs
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\NewtonsoftJSONApplication.deps.json
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\NewtonsoftJSONApplication.runtimeconfig.json
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\NewtonsoftJSONApplication.runtimeconfig.dev.json
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\NewtonsoftJSONApplication.dll
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\NewtonsoftJSONApplication.pdb
+F:\Gateway\NewtonsoftJSONApplication\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.csproj.CoreCompileInputs.cache
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.csproj.CopyComplete
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.dll
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.pdb
+F:\Gateway\NewtonsoftJSONApplication\obj\Debug\netcoreapp3.1\NewtonsoftJSONApplication.genruntimeconfig.cache

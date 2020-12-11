@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qvx4/XIW3RZa2pnUTDnv95DR1w43gK3hH/nl+YAM/NLgD4VgCx23VOVJzPiowhnCc6L06MsqoOLtu6WzO7rtyA==",
+  "success": true,
+  "projectFilePath": "F:\\Gateway\\NewtonsoftJSONApplication\\NewtonsoftJSONApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Malhar Trivedi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
