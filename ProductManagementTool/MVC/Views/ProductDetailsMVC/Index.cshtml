@@ -1,0 +1,90 @@
+﻿@model PagedList.IPagedList<MVC.Models.ProductDetail>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Product List";
+}
+
+<h2>Product List</h2>
+
+@using (Html.BeginForm("Index", "ProductDetailsMVC", FormMethod.Get))
+{
+<p>
+    <div class="form-group">
+        <label class="control-label col-md-1">Find:</label>
+        <div class="col-md-11">
+            @Html.TextBox("SearchString", ViewBag.CurrentFilter as string, new { @class = "form-control" })
+        </div>
+
+    </div>
+    <input type="submit" value="Search" class="btn btn-default" />
+</p>
+}
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Small Image
+            </th>
+            <th>
+                @Html.ActionLink("Category", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("Product Name", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                @Html.ActionLink("Price", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter })
+            </th>
+            <th>
+                Short Description
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img src="@Url.Content(item.Small_Image_Path)" alt="Image" height="50" width="50" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Short_Description)
+            </td>
+            <td>
+                <a href="@Url.Action("AddorEdit","ProductDetailsMVC", new { id = item.ProductID })" class="btn btn-default"><i class="fa fa-pencil"></i>  Edit</a> |
+                <a onclick="Delete(@item.ProductID)" class="btn btn-default"><i class="fa fa-trash"></i>  Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+
+@Html.PagedListPager(Model, page => Url.Action("Index",
+    new { page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter }))
+@section scripts{
+    <script>
+        $(function () {
+            var successMessage = '@TempData["SuccessMessage"]';
+            if (successMessage != '')
+                alertify.success(successMessage);
+        });
+        function Delete(id) {
+            alertify.confirm('Product Management', 'Are you sure to Delete this Product?', function(){
+                window.location.href = '@Url.Action("Delete", "ProductDetailsMVC")/' + id;
+            },null);
+        }
+    </script>
+}

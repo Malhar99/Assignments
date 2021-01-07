@@ -1,0 +1,149 @@
+﻿@model MVC.Models.ProductDetailMVC
+
+@{
+    ViewBag.Title = "AddorEdit";
+}
+
+<h2>Add New Product or Edit Product</h2>
+
+<div>
+    @using (Html.BeginForm("AddorEdit",
+                        "ProductDetailsMVC",
+                        FormMethod.Post,
+                        new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(model => model.ProductID)
+        <div class="form-horizontal">
+            <hr/>
+            <p class="text-danger">* is required fields</p>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <label class="control-label col-md-2">Product Name*</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" ,placeholder = "Product Name" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Category*</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Category, new SelectList(ViewBag.Categorylist),new { @class = "form-control" })
+                    @*@Html.EditorFor(model => model.Category, new { htmlAttributes = new { @class = "form-control", placeholder = "Category" } })*@
+                    @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Price*</label>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control", placeholder = "Price" } })
+                    @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger"})
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Quantity*</label>
+                <div class="col-md-10">
+                    @Html.DropDownListFor(model => model.Quantity, new SelectList(ViewBag.Quantitylist), new { @class = "form-control" }) 
+                    @Html.ValidationMessageFor(model => model.Quantity, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Short Description*</label>
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Short_Description, new { @class = "form-control", placeholder = "Short Description"  })
+                    @Html.ValidationMessageFor(model => model.Short_Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Detail Description</label>
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Long_Description, new { @class = "form-control", placeholder = "Detail Description" })
+                    @Html.ValidationMessageFor(model => model.Long_Description, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Small Image*</label>
+                <div class="col-md-10">
+                    <input type="file" name="file" id="file" accept="image/*|.gif, .jpg, .png" required />
+                    <div class="text-danger">
+                        Please enter file with size less than 2MB.
+                    </div>
+
+                    @Html.ValidationMessageFor(model => model.Small_Image_Path)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-md-2">Large Image</label>
+                <div class="col-md-10">
+                    <input type="file" name="file" id="file" accept="image/*|.gif, .jpg, .png" />
+                    <div class="text-danger">
+                        Please enter file with size greater then 2MB and less than 4MB.
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Small_Image_Path)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-2"></div>
+                <div class="col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-success" />
+                    <input type="reset" value="Reset" class="btn btn-primary" />
+                </div>
+            </div>
+        </div>
+
+     }
+</div>
+
+
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+    <script>
+        $("form").submit(function () {
+            var sizeInMBsmallfile = 0;
+            if ($('input[type="file"]')[0].files[0] != undefined) {
+                sizeInMBsmallfile = ($('input[type="file"]')[0].files[0].size / 1024 / 1024).toFixed(2);
+            }
+            var sizeInMBlargefile = 0;
+            if ($('input[type="file"]')[1].files[0] != undefined) {
+                sizeInMBlargefile = ($('input[type="file"]')[1].files[0].size / 1024 / 1024).toFixed(2);
+            }
+            var smallfilesizeLimit = 2;
+            var largefilesizeLimit = 4;
+            var invalidSmallFile = false;
+            var invalidlargeFile = false;
+            if (sizeInMBsmallfile > smallfilesizeLimit) {
+                invalidSmallFile = true;
+            }
+            if (sizeInMBlargefile > largefilesizeLimit) {
+                invalidlargeFile = true;
+            }
+            if (sizeInMBlargefile < smallfilesizeLimit && $('input[type="file"]')[1].files[0] != undefined) {
+                invalidlargeFile = true;
+            }
+            
+            if (invalidSmallFile && invalidlargeFile) {
+                alert("Small file must be less than 2MB and large file must be less than 4MB");
+                return false;
+            }
+            else if (invalidSmallFile) {
+                alert("Small file must be less than 2MB ");
+                return false;
+            }
+            else if (invalidlargeFile) {
+                alert("Large file must be greater than 2MB and less than 4MB ");
+                return false;
+            }
+        })
+    </script>
+}
+

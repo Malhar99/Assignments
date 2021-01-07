@@ -1,0 +1,14 @@
+INFO  2021-01-07 17:42:36,091 24904ms HomeController         PostUserImage      - POST request for Image Upload07-01-2021 5.42.36 PM
+INFO  2021-01-07 17:42:38,503 27316ms HomeController         PostProductDetail  - POST request is called for existing product with ProductName Malhar Trivedi07-01-2021 5.42.38 PM
+INFO  2021-01-07 17:46:51,564 280377ms HomeController         eleteProductDetail - DELETE request for ProductID207-01-2021 5.46.51 PM
+INFO  2021-01-07 17:46:53,527 282340ms HomeController         eleteProductDetail - DELETE request for ProductID107-01-2021 5.46.53 PM
+INFO  2021-01-07 17:47:15,644 304457ms HomeController         PostUserImage      - POST request for Image Upload07-01-2021 5.47.15 PM
+INFO  2021-01-07 17:47:15,682 304495ms HomeController         PostProductDetail  - POST request for ProductName Malhar Trivedi07-01-2021 5.47.15 PM
+INFO  2021-01-07 17:47:50,433 339247ms HomeController         PostUserImage      - POST request for Image Upload07-01-2021 5.47.50 PM
+INFO  2021-01-07 17:47:50,445 339259ms HomeController         PostProductDetail  - POST request is called for existing product with ProductName Malhar Trivedi07-01-2021 5.47.50 PM
+INFO  2021-01-07 18:46:27,938 13352ms HomeController         GetProductDetail   - GET Product by id Called for ProductID: 307-01-2021 6.46.27 PM
+INFO  2021-01-07 18:46:41,003 26418ms HomeController         PostUserImage      - POST request for Image Upload07-01-2021 6.46.41 PM
+INFO  2021-01-07 18:46:41,283 26698ms HomeController         PutProductDetail   - PUT request for for ProductID: 307-01-2021 6.46.41 PM
+INFO  2021-01-07 19:20:34,295 1223247ms HomeController         eleteProductDetail - DELETE request for ProductID307-01-2021 7.20.34 PM
+INFO  2021-01-07 19:22:46,225 1355177ms HomeController         PostUserImage      - POST request for Image Upload07-01-2021 7.22.46 PM
+INFO  2021-01-07 19:22:47,054 1356006ms HomeController         PostProductDetail  - POST request for ProductName Parle-G07-01-2021 7.22.47 PM

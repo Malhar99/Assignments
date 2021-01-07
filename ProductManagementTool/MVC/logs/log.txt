@@ -1,0 +1,4 @@
+INFO  2021-01-07 19:19:58,049 29244ms AccountController      Logout             - User Logout at 07-01-2021 7.19.58 PM
+INFO  2021-01-07 19:20:11,861 43055ms AccountController      Login              - User:malhartrivedi99@gmail.com Login at 07-01-2021 7.20.11 PM
+INFO  2021-01-07 19:20:37,402 68596ms ctDetailsMVCController Delete             - User: Deleted Product with ProductID:3 Successfully at 07-01-2021 7.20.37 PM
+INFO  2021-01-07 19:22:47,436 198630ms ctDetailsMVCController AddorEdit          - User: Added Parle-G Product Successfully at 07-01-2021 7.22.47 PM
