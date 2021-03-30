@@ -12,8 +12,8 @@ namespace ExtensionMethod.Test
         public void Test_ChangeCase()
         {
             // Arrange
-            var inputString = "VIRen";
-            var outputString = "viren";
+            var inputString = "MAlhar";
+            var outputString = "malhar";
             // Act
             var newString = inputString.ChangeCase();
             // Assert
@@ -23,8 +23,8 @@ namespace ExtensionMethod.Test
         public void Test_ChangeToTitleCase()
         {
             // Arrange
-            var inputString = "viren is in MCA";
-            var outputString = "Viren Is In MCA";
+            var inputString = "malhar is in btech";
+            var outputString = "Malhar Is In btech";
             // Act
             var newString = inputString.toTitleCase();
             // Assert
@@ -34,7 +34,7 @@ namespace ExtensionMethod.Test
         public void Test_IsLowerCaseString()
         {
             // Arrange
-            var inputString = "virennanda";
+            var inputString = "malhartrivedi";
             // Act
             var newString = inputString.isLowerCase();
             // Assert
@@ -44,7 +44,7 @@ namespace ExtensionMethod.Test
         public void Test_IsUpperCaseString()
         {
             // Arrange
-            var inputString = "VIREN";
+            var inputString = "MALHAR";
             // Act
             var newString = inputString.IsUpperCaseString();
             // Assert
@@ -54,8 +54,8 @@ namespace ExtensionMethod.Test
         public void Test_DoCapitalize()
         {
             // Arrange
-            var inputString = "viren";
-            var outputString = "VIREN";
+            var inputString = "malhar";
+            var outputString = "MALHAR";
             // Act
             var newString = inputString.doCapitalize();
             // Assert
@@ -77,8 +77,8 @@ namespace ExtensionMethod.Test
         public void Test_RemoveLastCharacter()
         {
             // Arrange
-            var inputString = "Viren";
-            var outputString = "Vire";
+            var inputString = "Malhar";
+            var outputString = "Malha";
             // Act
             var newString = inputString.removeLastCharacter();
             // Assert
@@ -88,7 +88,7 @@ namespace ExtensionMethod.Test
         public void Test_WordCount()
         {
             // Arrange
-            var inputString = "Viren Nanda";
+            var inputString = "Malhar Trivedi";
             var count = 2;
             // Act
             var newString = inputString.wordCount();
